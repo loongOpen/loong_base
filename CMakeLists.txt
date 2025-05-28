@@ -1,5 +1,5 @@
 #[[
-Copyright 2025 国家地方共建人形机器人创新中心/人形机器人（上海）有限公司, https://www.openloong.net
+Copyright 2025 人形机器人（上海）有限公司, https://www.openloong.net
 Thanks for the open biped control project Nabo: https://github.com/tryingfly/nabo
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -46,8 +46,6 @@ else()
 	set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS on)
 	set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 endif()
-# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
-set(CMAKE_INSTALL_RPATH "$ORIGIN/../module/nabo_locomotion;$ORIGIN/../module/nabo_manipulation;$ORIGIN/../module/loong_driver_sdk;")
 # ================================
 include(../loong_utility/loong_utility.cmake)
 
@@ -87,6 +85,8 @@ else()
 	message("=== linux x64架构 ===")
 	set(tgtArch x64)
 endif()
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+set(CMAKE_INSTALL_RPATH "$ORIGIN/../../third_party/lib_lin_${tgtArch};$ORIGIN/../module/nabo_locomotion;$ORIGIN/../module/nabo_manipulation;$ORIGIN/../module/loong_driver_sdk;")
 
 link_directories("third_party/lib_lin_${tgtArch}")
 link_directories("third_party/lib_lin_${tgtArch}/cuda")

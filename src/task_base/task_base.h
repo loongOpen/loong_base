@@ -1,5 +1,5 @@
 /*
-Copyright 2025 国家地方共建人形机器人创新中心/人形机器人（上海）有限公司, https://www.openloong.net
+Copyright 2025 人形机器人（上海）有限公司, https://www.openloong.net
 Thanks for the open biped control project Nabo: https://github.com/tryingfly/nabo
 
 Licensed under the Apache License, Version 2.0 (the "License");
